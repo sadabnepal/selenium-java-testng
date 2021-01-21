@@ -8,7 +8,7 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 	- Test Data Driven Framework
 	- ExtentLogger, Base64ImageScreenshot
 	- PropertyFileReader, ExcelReaderUtil, JsonReader, DataProviderUtil
-	- TestNGListners, MethodInterceptor, FaileTestRetry, AnnotationTransformer
+	- TestNGListners, MethodInterceptor, FailedTestRetry, AnnotationTransformer
 
 ### Getting Started
 ```
@@ -18,7 +18,7 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 ```
 
 ### View Report
-- Report are saved under {PROJECT_ROOT_FOLDER}/target/SUB_FOLDER/FILE_NAME.html
+- Report are saved under {PROJECT_ROOT_FOLDER}/extent-output/datatime_index.html
 
 ### Reports used
 - `Spark Report`
