@@ -1,7 +1,5 @@
 package com.testnepal.listeners;
 
-import java.io.IOException;
-
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
@@ -20,11 +18,7 @@ public class ListenersClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onFinish(ISuite suite) {
-		try {
 			ExtentReport.flushReports();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 	@Override

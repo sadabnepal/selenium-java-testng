@@ -9,7 +9,7 @@ import com.testnepal.constants.FrameworkConstant;
 import com.testnepal.driver.DriverManager;
 import com.testnepal.enums.WaitStrategy;
 
-public class ExplicitWaitFactory {
+public final class ExplicitWaitFactory {
 	
 	private ExplicitWaitFactory() {}
 	

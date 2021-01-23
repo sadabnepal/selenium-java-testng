@@ -27,12 +27,17 @@ public class ExtentReport {
 		}
 	}
 
-	public static void flushReports() throws IOException {
+	public static void flushReports()  {
 		if(Objects.nonNull(extent)) {
 			extent.flush();
 		}
 		ExtentManager.unload();
-		Desktop.getDesktop().browse(new File(FrameworkConstant.getExtentReportFilePath()).toURI());
+		
+		try {
+			Desktop.getDesktop().browse(new File(FrameworkConstant.getExtentReportFilePath()).toURI());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void creatTest(String testname) {

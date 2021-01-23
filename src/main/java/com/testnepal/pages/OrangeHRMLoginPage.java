@@ -3,6 +3,7 @@ package com.testnepal.pages;
 import org.openqa.selenium.By;
 
 import com.testnepal.enums.WaitStrategy;
+import com.testnepal.utils.DecodeUtils;
 
 public final class OrangeHRMLoginPage extends BasePage {
 	
@@ -15,8 +16,8 @@ public final class OrangeHRMLoginPage extends BasePage {
 		return this;
 	}
 	
-	public OrangeHRMLoginPage enterPassword(String pwd) {
-		doInput(textboxPassword, pwd, WaitStrategy.PRESENCE, "Password");
+	public OrangeHRMLoginPage enterPassword(String password) {
+		doInput(textboxPassword, DecodeUtils.getDecodedString(password), WaitStrategy.PRESENCE, "Password");
 		return this;
 	}
 	
