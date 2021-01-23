@@ -11,8 +11,20 @@ import com.testnepal.constants.FrameworkConstant;
 import com.testnepal.enums.ConfigProperties;
 import com.testnepal.exceptions.PropertyFileUsageException;
 
+/**
+ * Read the property file and store it in a HashMap for faster processing.
+ * Users can prefer to use json instead of property file based on their requirement.
+ * 
+ * <p>24-Jan-2021</p>
+ * @author MD SADAB SAQIB
+ * @version 1.0
+ * @since 1.0
+ */
 public final class PropertyUtils {
 
+	/**
+	 * Private constructor to avoid external instantiation
+	 */
 	private PropertyUtils() {}
 
 	private static Properties prop = new Properties();
@@ -30,6 +42,15 @@ public final class PropertyUtils {
 		}
 	}
 
+	/**
+	 * Receives the {@link com.testnepal.enums.ConfigProperties},converts to lower case , return the corresponding value
+	 * for the key from the HashMap
+	 * 
+	 * @author MD SADAB SAQIB
+	 * <p>24-Jan-2021</p>
+	 * @param key : To be fetched from property file
+	 * @return corresponding value for the requested key if found else {@link PropertyFileUsageException}
+	 */
 	public static String getValue(ConfigProperties key) {
 		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
 			throw new PropertyFileUsageException("Property name "+key+ " is not found. Please check config file..");

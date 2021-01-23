@@ -3,8 +3,20 @@ package com.testnepal.constants;
 import com.testnepal.enums.ConfigProperties;
 import com.testnepal.utils.PropertyUtils;
 
+/**
+ * Framework Constants holds all the constant values used within the framework. If some value needs to be changed
+ * or modified often, then it should be stored in the property files.
+ * 
+ * <p>23-Jan-2021</p>
+ * @author MD SADAB SAQIB
+ * @version 1.0
+ * @since 1.0
+ */
 public final class FrameworkConstant {
 
+	/**
+	 * Private constructor to avoid external instantiation
+	 */
 	private FrameworkConstant() {}
 
 	private static final String RESOURCES_FOLDER_PATH = System.getProperty("user.dir")+"/src/test/resources";
@@ -13,8 +25,7 @@ public final class FrameworkConstant {
 	private static final String EDGE_DRIVER_PATH = RESOURCES_FOLDER_PATH+"/executable/msedgedriver.exe";
 	private static final String CONFIG_FILE_PATH = RESOURCES_FOLDER_PATH+"/config/config.properties";
 	private static final String TEST_DATA_EXCEL_PATH = RESOURCES_FOLDER_PATH+"/excel/testdata.xlsx";
-	private static final String TEST_DATA1_JSON_PATH = RESOURCES_FOLDER_PATH+"/json/cred1.json";
-	private static final String TEST_DATA2_JSON_PATH = RESOURCES_FOLDER_PATH+"/json/cred2.json";
+	private static final String TEST_DATA_JSON_PATH = RESOURCES_FOLDER_PATH+"/json/data.json";
 	private static final String EXTENT_REPORT_FOLDER_PATH = System.getProperty("user.dir")+"/extent-output/";
 	private static final String RUNNER_MANAGER_SHEET_NAME = "RUNNERMANAGER";
 	private static final String ITERATION_DATA_SHEET_NAME = "DATA";
@@ -46,12 +57,8 @@ public final class FrameworkConstant {
 		return TEST_DATA_EXCEL_PATH;
 	}
 
-	public static String getTestData1JsonPath() {
-		return TEST_DATA1_JSON_PATH;
-	}
-
-	public static String getTestData2JsonPath() {
-		return TEST_DATA2_JSON_PATH;
+	public static String getTestDataJsonPath() {
+		return TEST_DATA_JSON_PATH;
 	}
 
 	public static String getRunnerManagerSheetName() {
@@ -62,6 +69,12 @@ public final class FrameworkConstant {
 		return ITERATION_DATA_SHEET_NAME;
 	}
 	
+	/**
+	 * 
+	 * @author MD SADAB SAQIB
+	 * <p>23-Jan-2021</p>
+	 * @return Extent Report path where the index.html file will be generated.
+	 */
 	public static String getExtentReportFilePath() {
 		if(extentReporFilePath.isEmpty()) {
 			extentReporFilePath = createReportPath();
@@ -73,6 +86,13 @@ public final class FrameworkConstant {
 		return EXTENT_REPORT_FOLDER_PATH;
 	}
 	
+	/**
+	 * 
+	 * @author MD SADAB SAQIB
+	 * 23-Jan-2021
+	 * @return If Override reports value in the 
+	 * property file is no,then the timestamp will be appended
+	 */
 	private static String createReportPath() {
 		if(PropertyUtils.getValue(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")) {
 			return getExtentReportFolderPath()+System.currentTimeMillis()+"_index.html";

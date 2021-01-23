@@ -16,6 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  * <p>It is also responsible for setting
  * the driver variable to DriverManager which handles the thread safety for the webdriver instance.</p>
  * 
+ * <p>23-Jan-2021</p>
  * @author MD SADAB SAQIB
  * @version 1.0
  * @since 1.0
@@ -52,6 +53,11 @@ public final class Drivers {
 		}
 	}
 	
+	/**
+	 * 
+	 * @author MD SADAB SAQIB
+	 * 23-Jan-2021
+	 */
 	public static void quitDriver() {
 		if(Objects.nonNull(DriverManager.getDriver())) {
 			DriverManager.getDriver().quit();
