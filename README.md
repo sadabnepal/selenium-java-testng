@@ -34,3 +34,6 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 	
 ### Sample Report
 ![SampleReport](https://user-images.githubusercontent.com/65847528/105609364-d437b980-5dce-11eb-94be-ab5192791150.PNG)
+
+### Special Thanks
+This complete framework is built by following [Testing Mini Bytes](https://www.youtube.com/playlist?list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB) Youtube channel. Do checkout his awesome vidoes.
