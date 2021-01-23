@@ -5,6 +5,8 @@ import java.util.Map;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
+import com.testnepal.annotations.FrameworkAnnotation;
+import com.testnepal.enums.CategoryType;
 import com.testnepal.pages.OrangeHRMHomePage;
 import com.testnepal.pages.OrangeHRMLoginPage;
 
@@ -13,7 +15,8 @@ public final class OrangeHRMTest extends BaseTest {
 	private OrangeHRMTest() {}
 
 	
-	//Retry mechanism, test data provider is passed using AnnotationTransformer 
+	//Retry mechanism, test data provider is passed using AnnotationTransformer
+	@FrameworkAnnotation(author = {"Sadab", "Saqib"}, category = { CategoryType.REGRESSION, CategoryType.SMOKE })
 	@Test
 	public void loginLogoutTest(Map<String, String> data) {
 		String expectedLoginPageTitle = new OrangeHRMLoginPage()

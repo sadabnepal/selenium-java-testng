@@ -3,6 +3,7 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 
 ### Key Features
 	- Parallel Execution
+	- Customer Annotation
 	- Cross browser testing
 	- Page Object Model pattern
 	- Test Data Driven Framework
@@ -18,7 +19,7 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 ```
 
 ### View Report
-- Report are saved under {PROJECT_ROOT_FOLDER}/extent-output/datatime_index.html
+- Report are saved under {PROJECT_ROOT_FOLDER}/extent-output/datetime_index.html
 
 ### Reports used
 - `Spark Report`
