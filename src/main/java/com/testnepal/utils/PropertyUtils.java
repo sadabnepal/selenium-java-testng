@@ -26,6 +26,7 @@ public final class PropertyUtils {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+			System.exit(0);
 		}
 	}
 
