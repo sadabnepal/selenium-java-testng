@@ -29,4 +29,4 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 - `Spark Report`
 	
 ### Sample Report
-![SampleReport](https://user-images.githubusercontent.com/65847528/105388867-2ba62000-5c3d-11eb-8f8d-a3d0d4508baa.PNG)
+![SampleReport](https://user-images.githubusercontent.com/65847528/105609364-d437b980-5dce-11eb-94be-ab5192791150.PNG)
