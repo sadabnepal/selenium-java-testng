@@ -2,6 +2,7 @@
 This is a very handy reusable maven project that uses Selenium Webdriver and Java.
 
 ### Key Features
+	- Java documentation
 	- Parallel Execution
 	- Customer Annotation
 	- Cross browser testing
@@ -18,8 +19,11 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 3. In the terminal, Perform "mvn clean test" to execute all tests
 ```
 
+### View Framework Java Document
+- Documents are saved under {PROJECT_ROOT_FOLDER}/javadoc/index.html
+
 ### View Report
-- Report are saved under {PROJECT_ROOT_FOLDER}/extent-output/datetime_index.html
+- Reports are saved under {PROJECT_ROOT_FOLDER}/extent-output/datetime_index.html
 
 ### Reports used
 - `Spark Report`

@@ -3,12 +3,13 @@ package com.testnepal.driver;
 import java.util.Objects;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
-import com.testnepal.constants.FrameworkConstant;
 import com.testnepal.enums.ConfigProperties;
 import com.testnepal.utils.PropertyUtils;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * <p>Driver class is responsible for invoking and closing the browser. </p>
@@ -38,14 +39,14 @@ public final class Drivers {
 	public static void initDriver(String browser) {
 		if(Objects.isNull(DriverManager.getDriver())) {
 			if(browser.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", FrameworkConstant.getChromeDriverPath());
+				WebDriverManager.chromedriver().setup();
 				DriverManager.setDriver(new ChromeDriver());
 			} else if(browser.equalsIgnoreCase("firefox")) {
-				System.setProperty("webdriver.gecko.driver", FrameworkConstant.getGeckoDriverPath());
+				WebDriverManager.firefoxdriver().setup();
 				DriverManager.setDriver(new FirefoxDriver());
 			} else if(browser.equalsIgnoreCase("edge")) {
-				System.setProperty("webdriver.ie.driver", FrameworkConstant.getEdgeDriverPath());
-				DriverManager.setDriver(new InternetExplorerDriver());
+				WebDriverManager.edgedriver().setup();
+				DriverManager.setDriver(new EdgeDriver());
 			}
 			DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 		}
