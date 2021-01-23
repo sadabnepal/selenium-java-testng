@@ -16,7 +16,11 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 ```
 1. git clone https://github.com/sadabnepal/SeleniumAutomationFramework.git
 2. Navigate to SeleniumAutomationFramework
-3. In the terminal, Perform "mvn clean test" to execute all tests
+3. Open the project in any IDE 
+4. Open testdata.xlsx from src/test/resources/excel
+5. In RUNNERMANAGER sheet Select yes for the test case you want to execute
+6. In DATA sheet select test methods, test data, browser, execution count and save the file
+7. Execute testng.xml as TestNG Suite
 ```
 
 ### View Framework Java Document
