@@ -1,6 +1,7 @@
 package com.testnepal.utils;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,17 +12,19 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.testnepal.constants.FrameworkConstant;
+import com.testnepal.exceptions.FrameworkExceptions;
+import com.testnepal.exceptions.InvalidExcelPathException;
 
 public final class ExcelUtils {
 
 	private ExcelUtils() {}
-	
+
 	public static List<Map<String, String>> getExcelData(String sheetname) {
 		List<Map<String, String>> list = null;
-		XSSFWorkbook workbook = null;
 
-		try(FileInputStream fis = new FileInputStream(FrameworkConstant.getTestDataExcelPath());) {
-			workbook = new XSSFWorkbook(fis);
+		try(FileInputStream fis = new FileInputStream(FrameworkConstant.getTestDataExcelPath());
+				XSSFWorkbook workbook = new XSSFWorkbook(fis);) {
+
 			XSSFSheet sheet = workbook.getSheet(sheetname);
 
 			Map<String, String> map = null;
@@ -39,9 +42,12 @@ public final class ExcelUtils {
 				}
 				list.add(map);
 			}
+			
+		} catch (FileNotFoundException e) {
+			throw new InvalidExcelPathException("Test data Excel file not found!!!!");
 		} catch (IOException e) {
-			e.printStackTrace();
-		} 
+			throw new FrameworkExceptions("IO Excepton occured while reading test data excel file");
+		}
 		return list;
 	}
 

@@ -9,6 +9,7 @@ import java.util.Properties;
 
 import com.testnepal.constants.FrameworkConstant;
 import com.testnepal.enums.ConfigProperties;
+import com.testnepal.exceptions.PropertyFileUsageException;
 
 public final class PropertyUtils {
 
@@ -30,7 +31,7 @@ public final class PropertyUtils {
 
 	public static String getValue(ConfigProperties key) {
 		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
-			throw new NullPointerException("Property name "+key+ " is not found. Please check config file..");
+			throw new PropertyFileUsageException("Property name "+key+ " is not found. Please check config file..");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());
 	}
