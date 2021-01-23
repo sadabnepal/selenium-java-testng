@@ -10,6 +10,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.testnepal.constants.FrameworkConstant;
 import com.testnepal.enums.CategoryType;
+import com.testnepal.enums.ConfigProperties;
+import com.testnepal.utils.PropertyUtils;
 
 public class ExtentReport {
 
@@ -32,24 +34,26 @@ public class ExtentReport {
 			extent.flush();
 		}
 		ExtentManager.unload();
-		
-		try {
-			Desktop.getDesktop().browse(new File(FrameworkConstant.getExtentReportFilePath()).toURI());
-		} catch (IOException e) {
-			e.printStackTrace();
+
+		if(PropertyUtils.getValue(ConfigProperties.AUTOREPORTOPEN).equalsIgnoreCase("yes")) {
+			try {
+				Desktop.getDesktop().browse(new File(FrameworkConstant.getExtentReportFilePath()).toURI());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
 	public static void creatTest(String testname) {
 		ExtentManager.setExtentTest(extent.createTest(testname));
 	}
-	
+
 	public static void addAuthor(String[] authors) {
 		for (String author: authors) {
 			ExtentManager.getExtentTest().assignAuthor(author);
 		}
 	}
-	
+
 	public static void addCategories(CategoryType[] categories) {
 		for (CategoryType category: categories) {
 			ExtentManager.getExtentTest().assignCategory(category.toString());
