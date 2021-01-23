@@ -3,3 +3,4 @@ test-output/
 .settings/
 .classpath
 extent-output/
+debug.log
