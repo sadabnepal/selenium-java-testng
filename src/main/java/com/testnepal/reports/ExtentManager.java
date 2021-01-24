@@ -48,7 +48,7 @@ public class ExtentManager {
 	 * It is much safer than assigning null value to ThreadLocal variable.
 	 * 
 	 * @author MD SADAB SAQIB
-	 * <p>24-Jan-2021</p
+	 * <p>24-Jan-2021</p>
 	 */
 	static void unload() {
 		exTest.remove();

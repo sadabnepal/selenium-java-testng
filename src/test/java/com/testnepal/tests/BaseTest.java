@@ -29,7 +29,7 @@ public class BaseTest {
 	 * Invokes a new browser instance and loads the respective URL.
 	 * @author MD SADAB SAQIB
 	 * 23-Jan-2021
-	 * @param dataHave all the data feeded to the corresponding test method from data provider.In our case,it is
+	 * @param data Have all the data feeded to the corresponding test method from data provider.In our case,it is
 	 * a hashmap containing all the values from the excel sheet.
 	 */
 	@SuppressWarnings("unchecked")

@@ -7,7 +7,7 @@ package com.testnepal.exceptions;
  * @author MD SADAB SAQIB
  * @version 1.0
  * @since 1.0
- * @see com.testnepal.constants.FrameworkConstants
+ * @see com.testnepal.constants.FrameworkConstant
  */
 @SuppressWarnings("serial")
 public class InvalidExcelPathException extends FrameworkExceptions {
@@ -23,7 +23,7 @@ public class InvalidExcelPathException extends FrameworkExceptions {
 	/**
 	 * 
 	 * @param message : Details about the exception or custom message
-	 * @param cause : Pass the enriched stacktrace or customized stacktrace
+	 * @param cauase : Pass the enriched stacktrace or customized stacktrace
 	 */
 	public InvalidExcelPathException(String message, Throwable cauase) {
 		super(message, cauase);
