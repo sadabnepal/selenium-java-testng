@@ -1,15 +1,12 @@
 package com.testnepal.driver;
 
+import java.net.MalformedURLException;
 import java.util.Objects;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import com.testnepal.enums.ConfigProperties;
+import com.testnepal.exceptions.BrowserInovkationFailedException;
+import com.testnepal.factories.DriverFactory;
 import com.testnepal.utils.PropertyUtils;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * <p>Driver class is responsible for invoking and closing the browser. </p>
@@ -39,20 +36,15 @@ public final class Drivers {
 	 */
 	public static void initDriver(String browser) {
 		if(Objects.isNull(DriverManager.getDriver())) {
-			if(browser.equalsIgnoreCase("chrome")) {
-				WebDriverManager.chromedriver().setup();
-				DriverManager.setDriver(new ChromeDriver());
-			} else if(browser.equalsIgnoreCase("firefox")) {
-				WebDriverManager.firefoxdriver().setup();
-				DriverManager.setDriver(new FirefoxDriver());
-			} else if(browser.equalsIgnoreCase("edge")) {
-				WebDriverManager.edgedriver().setup();
-				DriverManager.setDriver(new EdgeDriver());
+			try {
+				DriverManager.setDriver(DriverFactory.getDriver(browser));
+			} catch (MalformedURLException e) {
+				throw new BrowserInovkationFailedException("browser invokation failed, please check capablities!!");
 			}
 			DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 		}
 	}
-	
+
 	/**
 	 * 
 	 * @author MD SADAB SAQIB

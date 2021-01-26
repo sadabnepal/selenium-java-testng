@@ -11,7 +11,6 @@ package com.testnepal.exceptions;
 @SuppressWarnings("serial")
 public class FrameworkExceptions extends RuntimeException {
 
-
 	/**
 	 * 
 	 * @param message : Details about the exception or custom message
@@ -19,7 +18,7 @@ public class FrameworkExceptions extends RuntimeException {
 	public FrameworkExceptions(String message) {
 		super(message);
 	}
-	
+
 	/**
 	 * 
 	 * @param message : Details about the exception or custom message
@@ -28,6 +27,6 @@ public class FrameworkExceptions extends RuntimeException {
 	public FrameworkExceptions(String message, Throwable cause) {
 		super(message, cause);
 	}
-	
+
 
 }
