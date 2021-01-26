@@ -23,21 +23,20 @@ import com.testnepal.enums.CategoryType;
 @Target(METHOD)
 @Documented
 public @interface FrameworkAnnotation {
+	
 	/**
-	 * Store author name who created test as String[]
 	 * 
 	 * @author MD SADAB SAQIB
-	 * 23-Jan-2021
-	 * @return
+	 * 24-Jan-2021
+	 * @return Store author name who created test as String[]
 	 */
 	public String[] author();
 	
 	/**
-	 * Stores the category in form of Enum Array. Include the possible values in {@link com.testnepal.enums.CategoryType}
 	 * 
 	 * @author MD SADAB SAQIB
-	 * 23-Jan-2021
-	 * @return
+	 * 24-Jan-2021
+	 * @return Stores the category in form of Enum Array. Include the possible values in {@link com.testnepal.enums.CategoryType}
 	 */
 	public CategoryType[] category();
 

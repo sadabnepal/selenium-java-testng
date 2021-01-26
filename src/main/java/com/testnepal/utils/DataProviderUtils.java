@@ -36,8 +36,8 @@ public final class DataProviderUtils {
 	 * @return Object[] containing the List. Each index of the list contains HashMap and each of them
 	 * contains the test data needed to run the iterations.
 	 * 
-	 * @see com.tmb.tests.AmazonDemoTest 
-	 * @see com.tmb.listeners.AnnotationTransformer
+	 * @see com.testnepal.tests.OrangeHRMTest 
+	 * @see com.testnepal.listeners.AnnotationTransformer
 	 */
 	@DataProvider(parallel = true)
 	public static Object[] getData(Method m) {

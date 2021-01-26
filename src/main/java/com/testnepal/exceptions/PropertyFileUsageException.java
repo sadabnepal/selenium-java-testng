@@ -7,7 +7,7 @@ package com.testnepal.exceptions;
  * @author MD SADAB SAQIB
  * @version 1.0
  * @since 1.0
- * @see com.testnepal.constants.FrameworkConstants
+ * @see com.testnepal.constants.FrameworkConstant
  * @see com.testnepal.utils.PropertyUtils
  */
 @SuppressWarnings("serial")

@@ -7,8 +7,8 @@ import com.testnepal.enums.ConfigProperties;
 import com.testnepal.utils.PropertyUtils;
 
 /**
- * Implements {@link IRetryAnalyzer}.<p>
- * Helps in rerunning the failed tests.<p>
+ * Implements {@link IRetryAnalyzer}.
+ * Helps in rerunning the failed tests.
  * 
  * <p>24-Jan-2021</p>
  * @author MD SADAB SAQIB

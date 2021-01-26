@@ -72,8 +72,8 @@ public class ExtentLogger {
 	 * 
 	 * @author MD SADAB SAQIB
 	 * <p>24-Jan-2021</p>
-	 * @param message
-	 * @param isScreenshotNeed
+	 * @param message : custom message that needs to be logged
+	 * @param isScreenshotNeed : appends screenshot when true ,ignore otherwise
 	 */
 	public static void fail(String message, boolean isScreenshotNeed) {
 		if(PropertyUtils.getValue(ConfigProperties.FAILEDSTEPSCREENSHOTS).equalsIgnoreCase("yes") 

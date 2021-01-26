@@ -22,7 +22,7 @@ import com.testnepal.utils.PropertyUtils;
  * @author MD SADAB SAQIB
  * @version 1.0
  * @since 1.0
- * @see com.testnepal.listeners.ListenerClass
+ * @see com.testnepal.listeners.ListenersClass
  * @see com.testnepal.annotations.FrameworkAnnotation
  */
 public class ExtentReport {

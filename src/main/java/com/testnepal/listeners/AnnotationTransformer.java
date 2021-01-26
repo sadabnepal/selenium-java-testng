@@ -22,7 +22,7 @@ import com.testnepal.utils.DataProviderUtils;
 public class AnnotationTransformer implements IAnnotationTransformer {
 
 	/**
-	 * Helps in setting the dataprovider, dataprovider class and retry analyser annotation to all the test methods
+	 * Helps in setting the data provider, data provider class and retry analyzer annotation to all the test methods
 	 * at run time. 
 	 */
 	@SuppressWarnings("rawtypes")

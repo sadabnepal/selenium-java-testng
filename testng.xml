@@ -7,7 +7,7 @@
 		<listener class-name="com.testnepal.listeners.AnnotationTransformer" />
 	</listeners>
 
-	<test thread-count="1" name="Test" parallel="methods">
+	<test thread-count="2" name="Test" parallel="methods">
 		<classes>
 			<class name="com.testnepal.tests.OrangeHRMTest" />
 		</classes>

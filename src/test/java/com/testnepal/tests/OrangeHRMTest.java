@@ -48,6 +48,7 @@ public final class OrangeHRMTest extends BaseTest {
 		Assertions.assertThat(expectedLoginPageTitle).isEqualTo("OrangeHRM");
 	}
 
+	@FrameworkAnnotation(author = {"Meraj"}, category = { CategoryType.REGRESSION })
 	@Test
 	public void loginTest(Map<String, String> data) {
 		String expectedHomePageURL = new OrangeHRMLoginPage()
