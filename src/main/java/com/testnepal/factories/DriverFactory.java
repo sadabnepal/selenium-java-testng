@@ -36,9 +36,9 @@ public final class DriverFactory {
 	 * 
 	 * @author MD SADAB SAQIB
 	 * <p>26-Jan-2021</p>
-	 * @param browser
+	 * @param browser : pass the desired browser and return the webdriver for the same
 	 * @return WebDriver varible based on run mode provided in {@link com.testnepal.enums.ConfigProperties}
-	 * @throws MalformedURLException
+	 * @throws MalformedURLException  : Thrown to indicate that a malformed URL has occurred. Either nolegal protocol could be found in a specification string or thestring could not be parsed.
 	 */
 	public static WebDriver getDriver(String browser) throws MalformedURLException {
 		String runmode = PropertyUtils.getValue(ConfigProperties.RUNMODE);
