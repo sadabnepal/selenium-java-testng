@@ -22,7 +22,7 @@ public final class BrowserInovkationFailedException extends FrameworkExceptions 
 	/**
 	 * 
 	 * @param message : Details about the exception or custom message
-	 * @param cauase : Pass the enriched stack trace or customized stack trace
+	 * @param cause : Pass the enriched stack trace or customized stack trace
 	 */
 	public BrowserInovkationFailedException(String message, Throwable cause) {
 		super(message, cause);
