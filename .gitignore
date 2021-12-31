@@ -4,3 +4,5 @@ test-output/
 .classpath
 extent-output/
 debug.log
+SeleniumAutomationFramework.iml
+.idea/
