@@ -39,7 +39,7 @@ public final class Drivers {
 			try {
 				DriverManager.setDriver(DriverFactory.getDriver(browser));
 			} catch (MalformedURLException e) {
-				throw new BrowserInovkationFailedException("browser invokation failed, please check capablities!!");
+				throw new BrowserInovkationFailedException("browser invocation failed, please check capabilities!!");
 			}
 			DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 		}
