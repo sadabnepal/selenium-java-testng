@@ -15,33 +15,10 @@ import com.testnepal.constants.FrameworkConstant;
 import com.testnepal.exceptions.FrameworkExceptions;
 import com.testnepal.exceptions.InvalidExcelPathException;
 
-/**
- * Utility class to read or write to excel.
- * 
- * <p>24-Jan-2021</p>
- * @author MD SADAB SAQIB
- * @version 1.0
- * @since 1.0
- * @see com.testnepal.listeners.MethodInterceptor
- * @see DataProviderUtils
- */
 public final class ExcelUtils {
 
-	/**
-	 * Private constructor to avoid external instantiation
-	 */
 	private ExcelUtils() {}
 
-	/**
-	 * Encapsulates all the value from the mentioned excel sheet and store it in
-	 * List holding HashMaps. Key for the map in the column header in the excel sheet.
-	 * 
-	 * @author MD SADAB SAQIB
-	 * <p>24-Jan-2021</p>
-	 * @param sheetname : Excel sheetname to read the value from
-	 * @return List where each index holds a map and Each map holds the details about the test
-	 * TODO create reusable methods
-	 */
 	public static List<Map<String, String>> getExcelData(String sheetname) {
 		List<Map<String, String>> list = null;
 

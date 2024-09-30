@@ -3,20 +3,8 @@ package com.testnepal.constants;
 import com.testnepal.enums.ConfigProperties;
 import com.testnepal.utils.PropertyUtils;
 
-/**
- * Framework Constants holds all the constant values used within the framework. If some value needs to be changed
- * or modified often, then it should be stored in the property files.
- * 
- * <p>23-Jan-2021</p>
- * @author MD SADAB SAQIB
- * @version 1.0
- * @since 1.0
- */
 public final class FrameworkConstant {
 
-	/**
-	 * Private constructor to avoid external instantiation
-	 */
 	private FrameworkConstant() {}
 
 	private static final String RESOURCES_FOLDER_PATH = System.getProperty("user.dir")+"/src/test/resources";
@@ -54,12 +42,6 @@ public final class FrameworkConstant {
 		return ITERATION_DATA_SHEET_NAME;
 	}
 	
-	/**
-	 * 
-	 * @author MD SADAB SAQIB
-	 * <p>23-Jan-2021</p>
-	 * @return Extent Report path where the index.html file will be generated.
-	 */
 	public static String getExtentReportFilePath() {
 		if(extentReporFilePath.isEmpty()) {
 			extentReporFilePath = createReportPath();
@@ -71,13 +53,6 @@ public final class FrameworkConstant {
 		return EXTENT_REPORT_FOLDER_PATH;
 	}
 	
-	/**
-	 * 
-	 * @author MD SADAB SAQIB
-	 * 23-Jan-2021
-	 * @return If Override reports value in the 
-	 * property file is no,then the timestamp will be appended
-	 */
 	private static String createReportPath() {
 		if(PropertyUtils.getValue(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")) {
 			return getExtentReportFolderPath()+System.currentTimeMillis()+"_index.html";

@@ -1,13 +1,5 @@
 package com.testnepal.constants;
 
-/**
- * <p>URLConstants Constants holds all the constant URL values used within the framework.</p>
- * 
- * <p>23-Jan-2021</p>
- * @author MD SADAB SAQIB
- * @version 1.0
- * @since 1.0
- */
 public final class URLConstants {
 	
 	private URLConstants() {}

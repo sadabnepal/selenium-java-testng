@@ -14,8 +14,8 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 
 ### Getting Started
 ```
-1. git clone https://github.com/sadabnepal/SeleniumAutomationFramework.git
-2. Navigate to SeleniumAutomationFramework
+1. git clone https://github.com/sadabnepal/selenium-java-testng.git
+2. Navigate to selenium-java-testng
 3. Open the project in any IDE 
 4. Open testdata.xlsx from src/test/resources/excel
 5. In RUNNERMANAGER sheet Select yes for the test case you want to execute

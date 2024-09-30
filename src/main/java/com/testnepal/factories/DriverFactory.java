@@ -16,30 +16,10 @@ import com.testnepal.utils.PropertyUtils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-/**
- * This class is responsible for setting the remote or local driver variable
- * 
- * 26-Jan-2021
- * @author MD SADAB SAQIB
- * @version 1.0
- * @since 1.0
- * @see com.testnepal.driver.Drivers
- */
 public final class DriverFactory {
 
-	/**
-	 * Private constructor to avoid external instantiation
-	 */
 	private DriverFactory() {}
 
-	/**
-	 * 
-	 * @author MD SADAB SAQIB
-	 * <p>26-Jan-2021</p>
-	 * @param browser : pass the desired browser and return the webdriver for the same
-	 * @return WebDriver varible based on run mode provided in {@link com.testnepal.enums.ConfigProperties}
-	 * @throws MalformedURLException  : Thrown to indicate that a malformed URL has occurred. Either nolegal protocol could be found in a specification string or thestring could not be parsed.
-	 */
 	public static WebDriver getDriver(String browser) throws MalformedURLException {
 		String runmode = PropertyUtils.getValue(ConfigProperties.RUNMODE);
 		String remoteHubURL = "http://localhost:4444/wd/hub";
