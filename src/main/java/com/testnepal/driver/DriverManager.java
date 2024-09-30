@@ -12,8 +12,8 @@ public final class DriverManager {
 		return driver.get();
 	}
 
-	public static void setDriver(WebDriver driverref) {
-		driver.set(driverref);
+	public static void setDriver(WebDriver driverRef) {
+		driver.set(driverRef);
 	}
 
 	public static void unload() {

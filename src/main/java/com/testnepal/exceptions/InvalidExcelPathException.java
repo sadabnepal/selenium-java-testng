@@ -7,8 +7,8 @@ public class InvalidExcelPathException extends FrameworkExceptions {
 		super(message);
 	}
 	
-	public InvalidExcelPathException(String message, Throwable cauase) {
-		super(message, cauase);
+	public InvalidExcelPathException(String message, Throwable cause) {
+		super(message, cause);
 	}
 	
 }

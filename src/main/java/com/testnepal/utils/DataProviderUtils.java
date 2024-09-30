@@ -13,21 +13,21 @@ public final class DataProviderUtils {
 
 	private DataProviderUtils() {}
 
-	private static List<Map<String, String>> datalist = ExcelUtils.getExcelData("DATA");
+	private static List<Map<String, String>> dataList = ExcelUtils.getExcelData("DATA");
 
 	@DataProvider(parallel = true)
 	public static Object[] getData(Method m) {
-		String testname = m.getName();
-		if(datalist.isEmpty()) {
-			datalist = ExcelUtils.getExcelData(FrameworkConstant.getIterationDataSheetName());
+		String testName = m.getName();
+		if(dataList.isEmpty()) {
+			dataList = ExcelUtils.getExcelData(FrameworkConstant.getIterationDataSheetName());
 		}
 
 		List<Map<String, String>> requiredDataList = new ArrayList<>();
 
-		for(int i=0; i<datalist.size(); i++) {
-			if(datalist.get(i).get("TestName").equalsIgnoreCase(testname) &&
-					datalist.get(i).get("Execute").equalsIgnoreCase("yes")) {
-				requiredDataList.add(datalist.get(i));
+		for(int i=0; i<dataList.size(); i++) {
+			if(dataList.get(i).get("TestName").equalsIgnoreCase(testName) &&
+			dataList.get(i).get("Execute").equalsIgnoreCase("yes")) {
+				requiredDataList.add(dataList.get(i));
 			}
 		}
 

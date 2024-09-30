@@ -23,7 +23,7 @@ public class ListenersClass implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		ExtentReport.creatTest(result.getMethod().getDescription());
+		ExtentReport.createTest(result.getMethod().getDescription());
 		ExtentReport.addAuthor(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)
 			.author());
 		ExtentReport.addCategories(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class)

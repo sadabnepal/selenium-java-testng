@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 import java.util.Objects;
 
 import com.testnepal.enums.ConfigProperties;
-import com.testnepal.exceptions.BrowserInovkationFailedException;
+import com.testnepal.exceptions.BrowserInvocationFailedException;
 import com.testnepal.factories.DriverFactory;
 import com.testnepal.utils.PropertyUtils;
 
@@ -19,7 +19,7 @@ public final class Drivers {
 			try {
 				DriverManager.setDriver(DriverFactory.getDriver(browser));
 			} catch (MalformedURLException e) {
-				throw new BrowserInovkationFailedException("browser invocation failed, please check capabilities!!");
+				throw new BrowserInvocationFailedException("browser invocation failed, please check capabilities!!");
 			}
 			DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 		}

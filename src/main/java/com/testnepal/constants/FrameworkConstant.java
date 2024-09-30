@@ -16,7 +16,7 @@ public final class FrameworkConstant {
 	private static final String ITERATION_DATA_SHEET_NAME = "DATA";
 	
 	private static final int EXPLICIT_WAIT_TIME = 15;
-	private static String extentReporFilePath = "";
+	private static String extentReportFilePath = "";
 
 	public static String getConfigFilePath() {
 		return CONFIG_FILE_PATH;
@@ -43,10 +43,10 @@ public final class FrameworkConstant {
 	}
 	
 	public static String getExtentReportFilePath() {
-		if(extentReporFilePath.isEmpty()) {
-			extentReporFilePath = createReportPath();
+		if(extentReportFilePath.isEmpty()) {
+			extentReportFilePath = createReportPath();
 		}
-		return extentReporFilePath;
+		return extentReportFilePath;
 	}
 	
 	public static String getExtentReportFolderPath() {

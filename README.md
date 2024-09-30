@@ -2,7 +2,6 @@
 This is a very handy reusable maven project that uses Selenium Webdriver and Java.
 
 ### Key Features
-	- Java documentation
 	- Parallel Execution
 	- Customer Annotation
 	- Cross browser testing
@@ -10,7 +9,7 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 	- Test Data Driven Framework
 	- ExtentLogger, Base64ImageScreenshot
 	- PropertyFileReader, ExcelReaderUtil, JsonReader, DataProviderUtil
-	- TestNGListners, MethodInterceptor, FailedTestRetry, AnnotationTransformer
+	- TestNGListeners, MethodInterceptor, FailedTestRetry, AnnotationTransformer
 
 ### Getting Started
 ```
@@ -23,9 +22,6 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 7. Execute testng.xml as TestNG Suite
 ```
 
-### View Framework Java Document
-- Documents are saved under {PROJECT_ROOT_FOLDER}/javadoc/index.html
-
 ### View Report
 - Reports are saved under {PROJECT_ROOT_FOLDER}/extent-output/datetime_index.html
 
@@ -36,4 +32,4 @@ This is a very handy reusable maven project that uses Selenium Webdriver and Jav
 ![SampleReport](https://user-images.githubusercontent.com/65847528/105609364-d437b980-5dce-11eb-94be-ab5192791150.PNG)
 
 ### Special Thanks
-This complete framework is built by following [Testing Mini Bytes](https://www.youtube.com/playlist?list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB) Youtube channel. Do checkout his awesome vidoes.
+This complete framework is built by following [Testing Mini Bytes](https://www.youtube.com/playlist?list=PL9ok7C7Yn9A_JZFMrhrgEwfqQGiuyvSkB) Youtube channel. Do checkout his awesome videos.

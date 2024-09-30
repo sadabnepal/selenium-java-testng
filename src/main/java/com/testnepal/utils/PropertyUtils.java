@@ -16,13 +16,13 @@ public final class PropertyUtils {
 	private PropertyUtils() {}
 
 	private static Properties prop = new Properties();
-	private static final Map<String, String> CONFIGMAP = new HashMap<>();
+	private static final Map<String, String> CONFIG_MAP = new HashMap<>();
 
 	static {
 		try(FileInputStream fis = new FileInputStream(FrameworkConstant.getConfigFilePath());) {
 			prop.load(fis);
 			for(Map.Entry<Object, Object> entry: prop.entrySet()) {
-				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim());
+				CONFIG_MAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -31,9 +31,9 @@ public final class PropertyUtils {
 	}
 
 	public static String getValue(ConfigProperties key) {
-		if(Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
+		if(Objects.isNull(key) || Objects.isNull(CONFIG_MAP.get(key.name().toLowerCase()))) {
 			throw new PropertyFileUsageException("Property name "+key+ " is not found. Please check config file..");
 		}
-		return CONFIGMAP.get(key.name().toLowerCase());
+		return CONFIG_MAP.get(key.name().toLowerCase());
 	}
 }

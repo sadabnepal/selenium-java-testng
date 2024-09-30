@@ -21,12 +21,12 @@ public final class DriverFactory {
 	private DriverFactory() {}
 
 	public static WebDriver getDriver(String browser) throws MalformedURLException {
-		String runmode = PropertyUtils.getValue(ConfigProperties.RUNMODE);
+		String runMode = PropertyUtils.getValue(ConfigProperties.RUNMODE);
 		String remoteHubURL = "http://localhost:4444/wd/hub";
 		WebDriver driver = null;
 
 		if(browser.equalsIgnoreCase("chrome")) {	
-			if(runmode.equalsIgnoreCase("remote")) {
+			if(runMode.equalsIgnoreCase("remote")) {
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setBrowserName(BrowserType.CHROME);
 				driver = new RemoteWebDriver(new URL(remoteHubURL), cap);
@@ -37,7 +37,7 @@ public final class DriverFactory {
 			}
 		} 
 		else if(browser.equalsIgnoreCase("firefox")) {	
-			if(runmode.equalsIgnoreCase("remote")) {
+			if(runMode.equalsIgnoreCase("remote")) {
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setBrowserName(BrowserType.FIREFOX);
 				driver = new RemoteWebDriver(new URL(remoteHubURL), cap);
@@ -48,7 +48,7 @@ public final class DriverFactory {
 			}
 		} 
 		else if(browser.equalsIgnoreCase("edge")) {	
-			if(runmode.equalsIgnoreCase("remote")) {
+			if(runMode.equalsIgnoreCase("remote")) {
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setBrowserName(BrowserType.EDGE);
 				driver = new RemoteWebDriver(new URL(remoteHubURL), cap);

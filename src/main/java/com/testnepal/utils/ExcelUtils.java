@@ -19,13 +19,13 @@ public final class ExcelUtils {
 
 	private ExcelUtils() {}
 
-	public static List<Map<String, String>> getExcelData(String sheetname) {
+	public static List<Map<String, String>> getExcelData(String sheetName) {
 		List<Map<String, String>> list = null;
 
 		try(FileInputStream fis = new FileInputStream(FrameworkConstant.getTestDataExcelPath());
 				XSSFWorkbook workbook = new XSSFWorkbook(fis);) {
 
-			XSSFSheet sheet = workbook.getSheet(sheetname);
+			XSSFSheet sheet = workbook.getSheet(sheetName);
 
 			Map<String, String> map = null;
 			list = new ArrayList<>();
@@ -46,7 +46,7 @@ public final class ExcelUtils {
 		} catch (FileNotFoundException e) {
 			throw new InvalidExcelPathException("Test data Excel file not found!!!!");
 		} catch (IOException e) {
-			throw new FrameworkExceptions("IO Excepton occured while reading test data excel file");
+			throw new FrameworkExceptions("IO Exception occurred while reading test data excel file");
 		}
 		return list;
 	}

@@ -20,7 +20,7 @@ public final class OrangeHRMTest extends BaseTest {
 	public void loginLogoutTest(Map<String, String> data) {
 		String expectedLoginPageTitle = new OrangeHRMLoginPage()
 				.enterUsername(data.get("Username")).enterPassword(data.get("Password")).clickLoginBtn()
-				.clickOnLoggedinUserIcon().clickOnLogout()
+				.clickOnLoggedInUserIcon().clickOnLogout()
 				.getTitle();
 
 		Assertions.assertThat(expectedLoginPageTitle).isEqualTo("OrangeHRM");
@@ -36,7 +36,7 @@ public final class OrangeHRMTest extends BaseTest {
 		if(data.get("Username").equalsIgnoreCase("Admin") && data.get("Password").equalsIgnoreCase("admin123")) {
 			Assertions.assertThat(expectedHomePageURL)
 			.isEqualTo(URLConstants.getHomepageUrl());
-			new OrangeHRMHomePage().clickOnLoggedinUserIcon().clickOnLogout();
+			new OrangeHRMHomePage().clickOnLoggedInUserIcon().clickOnLogout();
 		} 
 		else {
 			Assertions.assertThat(expectedHomePageURL)
